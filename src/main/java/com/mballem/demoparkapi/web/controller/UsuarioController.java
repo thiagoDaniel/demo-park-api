@@ -16,8 +16,6 @@ import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -30,8 +28,7 @@ import java.util.List;
 @RestController
 @RequestMapping("api/v1/usuarios")
 public class UsuarioController {
-	
-	@Autowired
+
     private final UsuarioService usuarioService;
 
     @Operation(summary = "Criar um novo usuário", description = "Recurso para criar um novo usuário",
